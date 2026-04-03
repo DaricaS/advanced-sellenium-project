@@ -11,7 +11,7 @@ public class ExtentManager {
 
         if (extent == null) {
 
-            ExtentSparkReporter reporter = new ExtentSparkReporter("test-output/ExtentReport.html");
+            ExtentSparkReporter reporter = new ExtentSparkReporter("reports/ExtentReport.html");
             extent = new ExtentReports();
             extent.attachReporter(reporter);
         }
