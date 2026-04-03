@@ -27,6 +27,9 @@ src
 │ │ ├── base
 │ │ ├── tests
 │ │ |── listeners
+| |──resources
+|    |-testdata
+|    |-testfiles
 |
 |------downloads
 |------reports
