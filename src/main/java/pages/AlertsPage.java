@@ -10,14 +10,17 @@ public class AlertsPage {
     private By alertButton = By.xpath("//button[text()='Click for JS Alert']");
     private By confirmButton = By.xpath("//button[text()='Click for JS Confirm']");
     private By promptButton = By.xpath("//button[text()='Click for JS Prompt']");
-    private By resultText = By.id("result");
 
     public AlertsPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void clickAlertButton() {
+    public void openPage() {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+    }
+
+    public void clickAlertButton() {
+        openPage();
         driver.findElement(alertButton).click();
     }
 
@@ -30,12 +33,8 @@ public class AlertsPage {
     }
 
     public void sendTextToPrompt(String text) {
+        openPage();
         driver.findElement(promptButton).click();
         driver.switchTo().alert().sendKeys(text);
     }
-
-    public String getAlertText() {
-        return driver.switchTo().alert().getText();
-    }
 }
-
