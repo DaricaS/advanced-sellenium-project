@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium Advanced Project">
+
+    <listeners>
+            <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <test name="All Tests">
+
+        <classes>
+            <class name="tests.DynamicLoadingTests"/>
+            <class name="tests.FileOperationsTests"/>
+            <class name="tests.DragAndDropTests"/>
+            <class name="tests.AlertsTests"/>
+            <class name="tests.IFrameTests"/>
+            <class name="tests.MultipleWindowsTests"/>
+            <class name="tests.LoginDataDrivenTests"/>
+        </classes>
+
+    </test>
+
+</suite>
